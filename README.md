@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nimbus-Arc
+
+A Next.js 3D keyboard customization experience built with React Three Fiber, Prismic CMS, and Three.js.
+
+## Features
+
+- 🎨 Interactive 3D keyboard visualization
+- ⌨️ Customizable keycaps with multiple textures
+- 🎵 Mechanical keyboard sound effects
+- 🌐 Content managed via Prismic CMS
+- ⚡ Built with Next.js 16 and React 18
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **3D Graphics**: Three.js, React Three Fiber, React Three Drei
+- **CMS**: Prismic
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/              # Next.js app router pages
+├── components/       # React components (Keycap, Keyboard, etc.)
+├── slices/          # Prismic slice components
+└── prismicio.ts     # Prismic configuration
+```
+
+## 3D Assets
+
+The project includes custom 3D models:
+- Keyboard base (`keyboard.gltf`)
+- Individual keycaps (`keycap.gltf`)
+- Mechanical switches (`switch.gltf`)
+
+## Sound Effects
+
+Multiple mechanical keyboard switch sounds are included for different switch types:
+- Cherry MX Black
+- Cherry MX Blue
+- Cherry MX Brown
+- Cherry MX Red
+
+## Development
+
+To work with Prismic CMS:
+
+```bash
+npm run slicemachine
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
+- [Prismic Documentation](https://prismic.io/docs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
